@@ -5,13 +5,13 @@ on:
   workflow_dispatch
 
 jobs:
-  setup-node-job:
+  setup-python-job:
     runs-on: ubuntu-latest
-    steps:                           # This must be inside the job
-      - name: Set up Node.js
-        uses: actions/setup-node@v4  # Marketplace action
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '18'
+          python-version: '3.11'  # You can change this to any version you need
 
-      - name: Show Node version
-        run: node -V
+      - name: Show Python version
+        run: python --version
