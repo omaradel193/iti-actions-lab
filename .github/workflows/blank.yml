@@ -1,0 +1,17 @@
+name: Echo Jobs
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World"
+
+  bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Bye
+        run: echo "Bye World"
